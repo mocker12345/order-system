@@ -1,3 +1,3 @@
-/**
- * Created by rancongjie on 15/12/14.
- */
+angular.module('orderSystem', []).controller('indexController', ['$scope', function ($scope) {
+  $scope.name = 'ran'
+}]);

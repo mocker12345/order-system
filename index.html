@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="orderSystem">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- css -->
+  <link rel="stylesheet" href="dist/css/all.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/material.css">
+
+  <!--<script src="node_modules/bootstrap-material-design/node_modules/jquery/dist/jquery.min.js"></script>-->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="dist/js/main.js"></script>
+</head>
+<body ng-controller="indexController">
+<header>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">剁剁剁</h3>
+      <ul class="menu">
+        <li class="btn btn-primary">首页</li>
+        <li class="btn btn-primary">我的订单</li>
+        <li class="btn btn-primary">个人信息</li>
+      </ul>
+      <div class="login">
+        <a href="javascript:void(0)" class="btn btn-primary">登陆</a>
+        <a href="javascript:void(0)" class="btn btn-primary">注册</a>
+      </div>
+    </div>
+  </div>
+</header>
+<aside>
+  <div class="aside-bar">
+    <ul class="sidbar-btn">
+      <li class="btn btn-lg active">炒菜</li>
+      <li class="btn btn-lg">套饭</li>
+      <li class="btn btn-lg">炒饭</li>
+      <li class="btn btn-lg">快餐</li>
+      <li class="btn btn-lg">新上架</li>
+      <li class="btn btn-lg">店家推荐</li>
+    </ul>
+  </div>
+</aside>
+<div ng-view class="view"></div>
+</body>
+</html>

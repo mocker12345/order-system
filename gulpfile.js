@@ -21,11 +21,15 @@ gulp.task('html', function() {
     .pipe(livereload(server))
     .pipe(gulp.dest(htmlDst))
     .pipe(connect.reload());
+  gulp.src('./*html')
+    .pipe(livereload(server))
+    .pipe(gulp.dest(htmlDst))
+    .pipe(connect.reload());
 });
 
 gulp.task('connect', function () {
   connect.server({
-    root: 'dist/user/index',
+    //root: 'dist',
     livereload: true
   });
 });
@@ -73,7 +77,7 @@ gulp.task('js', function () {
 
 // 清空图片、样式、js
 gulp.task('clean', function() {
-  gulp.src(['./dist/css', './dist/js', './dist/images'], {read: false})
+  gulp.src(['./dist/'], {read: false})
     .pipe(clean());
 });
 

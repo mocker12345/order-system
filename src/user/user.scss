@@ -1,0 +1,54 @@
+//index
+[ng-controller='indexController'] {
+  .panel {
+    .panel-heading {
+      padding: 5px;
+      height: 70px;
+      overflow: hidden;
+      line-height: 55px;
+    }
+    h3 {
+      float: left;
+      padding: 15px;
+    }
+    .menu {
+      display: inline-block;
+      float: left;
+      li {
+        display: inline-block;
+      }
+    }
+    .login {
+      float: right;
+      padding: 0 5px;
+    }
+  }
+
+  .aside-bar {
+    float: left;
+    margin-top: 10px;
+    height: 500px;
+    text-align: center;
+    ul {
+      padding: 0;
+    }
+    .btn-lg {
+      width: 170px;
+    }
+    .sidbar-btn {
+      width: 170px;
+      height: 500px;
+      box-shadow: 2px 2px 5px #9C9C9C;
+      overflow: hidden;
+    }
+
+  }
+  .view {
+    height: 500px;
+    margin: 10px 20px 0 190px;
+    border: 1px solid #000;
+  }
+}
+
+
+
