@@ -1,5 +1,5 @@
 //index
-[ng-controller='indexController'] {
+[ng-controller='mainController'] {
   .panel {
     .panel-heading {
       padding: 5px;
@@ -8,6 +8,10 @@
       line-height: 55px;
     }
     h3 {
+      .material-icons {
+        font-size: 30px;
+        vertical-align: bottom;
+      }
       float: left;
       padding: 15px;
     }
@@ -43,12 +47,54 @@
     }
 
   }
-  .view {
-    height: 500px;
+  .content {
     margin: 10px 20px 0 190px;
     border: 1px solid #000;
+    min-height: 500px;
+    overflow: auto;
   }
 }
 
+[ng-controller="menuController"] {
+  .foot-repeat {
+    padding: 0 70px;
+    overflow: auto;
+    .food-box {
+      background-color: rgba(128, 128, 128, .1);
+      float: left;
+      margin: 30px;
+      width: 170px;
+      height: 220px;
+      text-align: center;
+      font-size: 12px;
+      .food-title {
+        margin: 10px 0;
+      }
+      .food-img {
+        height: 140px;
+        width: 140px;
+      }
+      .food-price {
+        padding-top: 20px;
+      }
+    }
+  }
 
+}
+
+[ng-controller='detailController'] {
+  .detail-form {
+    padding: 30px;
+    .control-label {
+      text-align: right;
+    }
+    div {
+      margin-bottom: 10px;
+    }
+    .detail-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
 

@@ -61,9 +61,9 @@ gulp.task('images', function(){
 // js处理
 gulp.task('js', function () {
   var jsSrc = './src/**/**/*.js',
+    jsMain = './src/user/index/index.js',
     jsDst ='./dist/js';
-
-  gulp.src(jsSrc)
+  gulp.src([jsMain, jsSrc])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
@@ -82,7 +82,7 @@ gulp.task('clean', function() {
 });
 
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
-gulp.task('default', ['clean','connect','watch'], function(){
+gulp.task('default', ['connect', 'watch'], function () {
   gulp.start('html','css','images','js');
 });
 

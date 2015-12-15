@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "angular": "^1.4.8",
+    "angular-route": "^1.4.8",
     "bootstrap": "^4.0.0-alpha.2",
     "bootstrap-material-design": "^0.3.0",
     "gulp": "^3.9.0",

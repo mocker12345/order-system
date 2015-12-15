@@ -1,3 +1,4 @@
-angular.module('orderSystem', []).controller('indexController', ['$scope', function ($scope) {
-  $scope.name = 'ran'
+var app = angular.module('app', ['ngRoute']);
+app.controller('mainController', ['$scope', function ($scope) {
+  $scope.name = 'ran';
 }]);

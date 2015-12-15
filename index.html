@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="orderSystem">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -7,16 +7,19 @@
   <link rel="stylesheet" href="dist/css/all.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/material.css">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   <!--<script src="node_modules/bootstrap-material-design/node_modules/jquery/dist/jquery.min.js"></script>-->
   <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
   <script src="dist/js/main.js"></script>
+  <script src="route.js"></script>
 </head>
-<body ng-controller="indexController">
+<body ng-controller="mainController">
 <header>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">剁剁剁</h3>
+      <h3 class="panel-title"><i class="material-icons">restaurant_menu</i>剁剁剁</h3>
       <ul class="menu">
         <li class="btn btn-primary">首页</li>
         <li class="btn btn-primary">我的订单</li>
@@ -41,6 +44,8 @@
     </ul>
   </div>
 </aside>
-<div ng-view class="view"></div>
+<div class="content" class="view">
+  <div ng-view></div>
+</div>
 </body>
 </html>
