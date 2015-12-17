@@ -140,7 +140,26 @@
 
 [ng-controller = 'loginController'] {
   .login-box {
-    
+    div {
+      padding: 15px 10px;
+    }
+    margin: 20px 300px;
     box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.06), 5px 3px 85px 12px rgba(0, 0, 0, 0.16) inset;
   }
 }
+
+[ng-controller = 'signController'] {
+  .sign-box {
+    margin: 20px 300px;
+    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.06), 5px 3px 85px 12px rgba(0, 0, 0, 0.16) inset;
+    div {
+      padding: 10px 10px;
+    }
+    .form-control {
+      width: 250px;
+    }
+
+  }
+
+}
+

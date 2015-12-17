@@ -2,13 +2,15 @@
   <div class="login-box">
     <div>
       <label>用户名:</label>
-      <input type="text">
+      <input type="text" class="form-control" ng-model="user">
     </div>
     <div>
       <label>密码:</label>
-      <input type="text">
+      <input type="password" class="form-control" ng-model="pass">
     </div>
-    <button class="btn btn-primary">登陆</button>
-    <button class="btn btn-default">注册</button>
+    <div>
+      <button class="btn btn-primary" ng-click="login()">登陆</button>
+      <button class="btn btn-default">还没有账号?点击注册</button>
+    </div>
   </div>
 </div>

@@ -13,6 +13,8 @@ app.config(
     });
     $routeProvider.when('/myorder', {controller: 'myorderController', templateUrl: './dist/user/myorder/myorder.html'});
     $routeProvider.when('/login', {controller: 'loginController', templateUrl: './dist/user/login/login.html'});
-
+    $routeProvider.when('/sign',{controller:'signController',templateUrl:'./dist/user/sign/sign.html'});
+    $routeProvider.when('/busmain',{controller:'busmainController',templateUrl:'./dist/business/mainpage/mainpage.html'});
+    $routeProvider.when('/bus/edit/:id',{controller:'editController',templateUrl:'./dist/business/edit/edit.html'});
   }]
 );

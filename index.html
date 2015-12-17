@@ -12,18 +12,21 @@
   <!--<script src="node_modules/bootstrap-material-design/node_modules/jquery/dist/jquery.min.js"></script>-->
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/apisdk/apisdk.js"></script>
   <script src="dist/js/main.js"></script>
   <script src="route.js"></script>
+  <script src="api.js"></script>
 </head>
 <body ng-controller="mainController">
 <header>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title"><i class="material-icons">restaurant_menu</i>剁剁剁</h3>
+      <h3 class="panel-title"><i class="material-icons">restaurant_menu</i>剁剁剁外卖</h3>
       <ul class="menu">
-        <li class="btn btn-primary">首页</li>
-        <li class="btn btn-primary">我的订单</li>
-        <li class="btn btn-primary">个人信息</li>
+        <li ><a href="###" class="btn btn-primary" ng-class="{true:'active'}[true]">首页</a></li>
+        <li ><a href="###" class="btn btn-primary">我的订单</a></li>
+        <li ><a href="###" class="btn btn-primary">个人信息</a></li>
+        <li ><a href="###" class="btn btn-primary">公告</a></li>
       </ul>
       <div class="login">
         <a href="javascript:void(0)" class="btn btn-primary">登陆</a>
