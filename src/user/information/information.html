@@ -2,19 +2,19 @@
   <div class="info-box">
     <div>
       <label>用户名:</label>
-      <input type="text" class="form-control" disabled>
+      <input type="text" class="form-control" disabled ng-model="data.username">
     </div>
     <div>
       <label>密码:</label>
-      <input type="password" class="form-control">
+      <input type="password" class="form-control" ng-model="data.password">
     </div>
     <div>
       <label>送餐地址</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" ng-model="data.address">
     </div>
     <div>
       <label>联系方式</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" ng-model="data.mobile">
     </div>
     <button class="btn btn-primary">保存</button>
     <button class="btn btn-warning">重置</button>
