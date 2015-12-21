@@ -9,7 +9,7 @@ app.factory('api', ($q, $http) => new Apisdk([
   'GET /user/load/:id',
   'GET /user/update/:id'
 ], {
-  host: '/',
+  host: '/ordersystem',
   promise: $q,
   http: request => {
     if (request.method === 'GET' && request.data) {

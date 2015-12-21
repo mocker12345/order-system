@@ -15,7 +15,7 @@ app.controller('loginController', ['$scope', '$location', 'api','$rootScope', fu
         alert(res.errorMsg);
       }
     }, function (err) {
-      console.err(err);
+      console.error(err);
     });
   };
 }]);

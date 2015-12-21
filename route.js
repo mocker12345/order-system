@@ -16,5 +16,7 @@ app.config(
     $routeProvider.when('/sign',{controller:'signController',templateUrl:'./dist/user/sign/sign.html'});
     $routeProvider.when('/busmain',{controller:'busmainController',templateUrl:'./dist/business/mainpage/mainpage.html'});
     $routeProvider.when('/bus/edit/:id',{controller:'editController',templateUrl:'./dist/business/edit/edit.html'});
+    $routeProvider.when('/bus/add',{controller:'addController',templateUrl:'./dist/business/add/add.html'});
+
   }]
 );

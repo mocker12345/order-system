@@ -33,5 +33,5 @@ app.controller('infoController', ['$scope', '$rootScope', '$location', 'api', fu
     }, function (err) {
       console.error(err);
     });
-  }
+  };
 }]);
