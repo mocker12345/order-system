@@ -6,25 +6,14 @@
       <th>菜名</th>
       <th>单价</th>
       <th>数量</th>
+      <th>操作</th>
       </thead>
       <tbody>
-      <tr>
-        <td>1</td>
-        <td>鱼香肉丝</td>
-        <td>12</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>鱼香肉丝</td>
-        <td>12</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>鱼香肉丝</td>
-        <td>12</td>
-        <td>2</td>
+      <tr ng-repeat="item in cart">
+        <td ng-bind="item.id"></td>
+        <td ng-bind="item.name"></td>
+        <td ng-bind="item.price"></td>
+        <td ng-bind="item.number"></td>
       </tr>
       </tbody>
     </table>
@@ -32,21 +21,20 @@
   <div class="userInfo">
     <div>
       <label>总价</label>
-      <span>24元</span>
+      <span ng-bind="data.totalprice"></span>
     </div>
     <div>
       <label>配送地址</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" ng-model="user.addresses[0].location">
     </div>
     <div>
       <label>联系方式</label>
-      <input type="text" class="form-control">
+      <span ng-bind="user.mobile"></span>
     </div>
     <div>
       <label>预计送达时间</label>
-      <span>20:00</span>
+      <span ng-bind="destime"></span>
     </div>
-    <button class="btn btn-primary">确认下单</button>
+    <button class="btn btn-primary" ng-click="addList()">确认下单</button>
   </div>
-
 </div>

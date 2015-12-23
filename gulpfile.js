@@ -35,7 +35,7 @@ gulp.task('connect', function () {
     middleware: function () {
       return [
         proxy([
-          '^/ordersystem/(.*)$ http://localhost:3000/api/v1/$1 [P]'
+          '^.*/ordersystem/(.*)$ http://localhost:8080/api/v1/$1 [P]'
         ])
       ]
     }

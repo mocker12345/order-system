@@ -1,10 +1,18 @@
 <div ng-controller="menuController">
   <div class="foot-repeat">
-    <div class="food-box">
-      <div class="food-title">鱼香肉丝</div>
-      <img class="food-img" src="###">
-
-      <div class="food-price">12元</div>
+    <div class="food-box" ng-repeat="items in data.products">
+      <div class="food-title"><span ng-bind="items.name"></span> <span ng-bind="items.price">12元</span></div>
+      <img class="food-img" ng-src="{{items.imgurl}}">
+      <div class="add-cart">
+        <span>
+          <input type="number" class="form-control" value="1" ng-model="chart.number">
+        </span>
+        <button class="btn add-box" ng-click="addCart(items.id)">
+          <i class="material-icons add-btn">add_circle</i>
+          添加到购物车
+        </button>
+      </div>
     </div>
+    <paging ng-show="items" params="params" list="items" callback="menuList"></paging>
   </div>
 </div>

@@ -1,13 +1,17 @@
-/**
- * Created by rancongjie on 15/12/17.
- */
 'use strict';
 app.factory('api', ($q, $http) => new Apisdk([
   'GET /user/register',
   'GET /user/login',
   'GET /user/logout',
   'GET /user/load/:id',
-  'GET /user/update/:id'
+  'GET /user/update/:id',
+  'GET /product/load/:id',
+  'GET /product/find',
+  'GET /product/tocart/:id',
+  'GET /product/showcart',
+  'GET /order/add',
+  'GET /order/find',
+  'GET /order/load/:id',
 ], {
   host: '/ordersystem',
   promise: $q,
@@ -19,11 +23,13 @@ app.factory('api', ($q, $http) => new Apisdk([
         if (value === null) value = '';
         if (value === void 0) continue;
         queryString.push(encodeURIComponent(i) + '=' + encodeURIComponent(value));
+
       }
       if (queryString.length) {
         if (!~request.url.indexOf('?')) request.url += '?';
         if (!/[?&]$/.test(request.url)) request.url += '&';
         request.url += queryString.join('&');
+
       }
       delete request.data;
     }
@@ -33,6 +39,6 @@ app.factory('api', ($q, $http) => new Apisdk([
         'Content-Type': undefined
       };
     }
-    return $http(request);
+    return $http(request).then(response=>response);
   }
 }));

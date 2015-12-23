@@ -13,10 +13,17 @@ app.config(
     });
     $routeProvider.when('/myorder', {controller: 'myorderController', templateUrl: './dist/user/myorder/myorder.html'});
     $routeProvider.when('/login', {controller: 'loginController', templateUrl: './dist/user/login/login.html'});
-    $routeProvider.when('/sign',{controller:'signController',templateUrl:'./dist/user/sign/sign.html'});
-    $routeProvider.when('/busmain',{controller:'busmainController',templateUrl:'./dist/business/mainpage/mainpage.html'});
-    $routeProvider.when('/bus/edit/:id',{controller:'editController',templateUrl:'./dist/business/edit/edit.html'});
-    $routeProvider.when('/bus/add',{controller:'addController',templateUrl:'./dist/business/add/add.html'});
-
+    $routeProvider.when('/sign', {controller: 'signController', templateUrl: './dist/user/sign/sign.html'});
+    $routeProvider.when('/busmain', {
+      controller: 'busmainController',
+      templateUrl: './dist/business/mainpage/mainpage.html'
+    });
+    $routeProvider.when('/bus/edit/:id', {controller: 'editController', templateUrl: './dist/business/edit/edit.html'});
+    $routeProvider.when('/bus/add', {controller: 'addController', templateUrl: './dist/business/add/add.html'});
+    $routeProvider.when('/message', {controller: 'mesController', templateUrl: './dist/business/message/message.html'});
+    $routeProvider.when('/myorder/:id', {
+      controller: 'orderDetailCtr',
+      templateUrl: './dist/user/orderdetail/orderdetail.html'
+    });
   }]
 );

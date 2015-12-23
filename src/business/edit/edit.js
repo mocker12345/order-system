@@ -1,3 +1,3 @@
-app.controller('editController',['$scope','$rootScope', function ($scope,$rootScope) {
+app.controller('editController',['$scope','$rootScope','api', function ($scope,$rootScope,api) {
 
 }]);

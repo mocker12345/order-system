@@ -70,6 +70,21 @@
       .food-title {
         margin: 10px 0;
       }
+      .form-control {
+        width: 30px;
+        display: inline-block;
+      }
+      .add-box {
+        cursor: pointer;
+        width: 120px;
+        padding: 0;
+        font-size: 8px;
+        .add-btn {
+          vertical-align: middle;
+          color:#fff;
+          font-size: 20px;
+        }
+      }
       .food-img {
         height: 140px;
         width: 140px;

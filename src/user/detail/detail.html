@@ -3,24 +3,26 @@
     <div class="form-group">
       <div class="row">
         <label class="col-md-2 control-label">名称</label>
-        <span class="col-md-10">鱼香肉丝</span>
+        <span class="col-md-10" ng-bind="data.name"></span>
       </div>
 
       <div class="row">
         <label class="col-md-2 control-label ">参考图片</label>
-        <img src="###" class="col-md-10 detail-img">
+        <img ng-src="{{data.imgurl}}" class="col-md-10 detail-img">
       </div>
       <div class="row">
         <label class="col-md-2 control-label">描述</label>
-        <span class="col-md-10">鱼香肉丝选料精细，成菜色泽红润、富鱼香味，吃起来具有咸甜酸辣兼备的特点，肉丝质地柔滑软嫩。</span>
+        <span class="col-md-10" ng-bind="data.description"></span>
       </div>
       <div class="row">
         <label class="col-md-2 control-label">价格</label>
-        <span class="col-md-10">12</span>
+        <span class="col-md-10" ng-bind="data.price">12</span>
       </div>
       <hr>
       <div class="col-md-offset-2">
-        <button class="btn btn-primary ">订购</button>
+        订购数量
+        <input type="number" class="form-control" style="width: 140px" ng-model="cart.number">
+        <button class="btn btn-primary">加入购物车</button>
       </div>
     </div>
   </form>
