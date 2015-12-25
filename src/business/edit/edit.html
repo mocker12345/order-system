@@ -7,29 +7,28 @@
       <div class="panel-body">
         <div>
           <label>名称</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" ng-model="data.name">
         </div>
         <div>
           <label>类别</label>
-          <select class="form-control">
-            <!--todo-->
+          <select class="form-control" ng-model="data.cid" ng-options="item.id as item.name for item in cate">
           </select>
         </div>
         <div>
           <label>参考图片</label>
-          <img src="###" >
-          <!--<button>todo </button>-->
+          <img ng-src="data.imgurl">
+          <label class="btn btn-primary"><input type="file" id="file-btn" class="hidden"></label>
         </div>
         <div>
           <label>描述</label>
-          <textarea rows="3" class="form-control"></textarea>
+          <textarea rows="3" class="form-control" ng-model="data.description"></textarea>
         </div>
         <div>
           <label>价格</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" ng-model="data.price">
         </div>
         <div>
-          <button class="btn btn-primary save-btn">保存</button>
+          <button class="btn btn-primary save-btn" ng-click="save()">保存</button>
         </div>
       </div>
     </div>

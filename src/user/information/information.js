@@ -1,4 +1,4 @@
-app.controller('infoController', ['$scope', '$rootScope', '$location', 'api', function ($scope, $location, $rootScope, api) {
+app.controller('infoController', ['$scope', '$rootScope', '$location', 'api', function ($scope,$rootScope,$location,api) {
   if ($rootScope.nowId) {
     api.user.load($rootScope.nowId).get().then(function (res) {
       if (res.success) {
@@ -15,8 +15,10 @@ app.controller('infoController', ['$scope', '$rootScope', '$location', 'api', fu
       console.error(err);
     });
   } else {
-    alert('请先登录');
+    //console.log($location);
     $location.path('/login');
+    console.log(123);
+
   }
   $scope.update = function () {
     $scope.newData = {

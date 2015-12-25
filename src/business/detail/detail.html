@@ -1,0 +1,35 @@
+<div ng-controller="busDetailController">
+  <div class="busDetail-box">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>商品详情</h3>
+      </div>
+      <div class="panel-body">
+        <div>
+          <label>名称</label>
+          <span ng-bind="data.name"></span>
+        </div>
+        <div>
+          <label>类别</label>
+          <span ng-bind="data.category.name"></span>
+        </div>
+        <div>
+          <label>参考图片</label>
+          <img ng-src="{{data.imgurl}}">
+        </div>
+        <div>
+          <label>描述</label>
+          <span ng-bind="data.description"></span>
+        </div>
+        <div>
+          <label>价格</label>
+          <span ng-bind="data.price"></span>
+        </div>
+        <div>
+          <a ng-href="/bus/edit/{{data.id}}" class="btn btn-primary edit-btn">修改</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

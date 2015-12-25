@@ -3,13 +3,13 @@
     <div class="panel panel-primary">
       <div class="panel-heading"><h3>公告</h3></div>
       <div class="panel-body">
-        <div class="business" ng-if="false">
-          <textarea class="form-control" cols="30" rows="10"></textarea>
+        <div class="business" ng-if="lead">
+          <textarea class="form-control" cols="30" rows="10" ng-model=""></textarea>
           <div>
             <button class="btn btn-primary">发布</button>
           </div>
         </div>
-        <div class="user" ng-if="true">
+        <div class="user" ng-if="lead">
           <div class="message-area">asdsadasd</div>
         </div>
       </div>

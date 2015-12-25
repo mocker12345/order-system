@@ -3,6 +3,7 @@ app.controller('firmController', ['$scope', '$rootScope', '$location', '$filter'
     $scope.loadList();
   } else {
     alert('请先登陆');
+    $location.path('/login');
   }
   $scope.loadList = function () {
     api.product.showcart.get().then(function (res) {

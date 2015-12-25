@@ -81,3 +81,32 @@
 
 
 }
+[ng-controller ="busDetailController"] {
+  .busDetail-box{
+    label {
+      width: 100px;
+      vertical-align: top;
+    }
+    div {
+      margin-bottom: 10px;
+    }
+    span {
+      width: 300px;
+      display: inline-block;
+
+    }
+    .panel-body {
+      padding: 20px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    .edit-btn {
+      margin-left: 100px;
+    }
+  }
+}
+//[ng-controller="busOrderDetailCtr"] {
+//
+//}
