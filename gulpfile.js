@@ -22,10 +22,6 @@ gulp.task('html', function () {
     .pipe(livereload(server))
     .pipe(gulp.dest(htmlDst))
     .pipe(connect.reload());
-  gulp.src('./*html')
-    .pipe(livereload(server))
-    .pipe(gulp.dest(htmlDst))
-    .pipe(connect.reload());
 });
 
 gulp.task('connect', function () {

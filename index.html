@@ -22,12 +22,18 @@
   <header>
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title"><i class="material-icons">restaurant_menu</i>剁剁剁外卖</h3>
-        <ul class="menu">
+        <h3 class="panel-title"><i class="material-icons">restaurant_menu</i>小分队外卖</h3>
+        <ul class="menu" ng-if="lead ===false">
           <li><a href="#/" class="btn btn-primary">首页</a></li>
           <li><a href="#/myorder" class="btn btn-primary">我的订单</a></li>
           <li><a href="#/firm" class="btn btn-primary">购物车</a></li>
           <li><a href="#/myinfo" class="btn btn-primary">个人信息</a></li>
+          <li><a href="#/message" class="btn btn-primary">公告</a></li>
+        </ul>
+        <ul class="menu" ng-if="lead===true">
+          <li><a href="#/busmain" class="btn btn-primary">商品列表</a></li>
+          <li><a href="#/bus/listcheck" class="btn btn-primary">订单</a></li>
+          <li><a href="#/bus/add" class="btn btn-primary">添加商品</a></li>
           <li><a href="#/message" class="btn btn-primary">公告</a></li>
         </ul>
         <div class="login">
@@ -39,8 +45,12 @@
   </header>
   <aside>
     <div class="aside-bar">
+      <!--<div ng-repeat="items in cateGory">-->
+      <!--<a class="category-btn" ng-href="/" ng-bind="items.name" ng-click="changeType(items.id)" ng-class="{true:active}[items.id===type]"></a>-->
+      <!--</div>-->
       <div ng-repeat="items in cateGory">
-        <a class="category-btn" ng-href="/" ng-bind="items.name" ng-click="changeType(items.id)" ng-class="{true:active}[items.id===type]"></a>
+        <button class="btn btn-default category-btn" ng-bind="items.name" ng-click="changeType(items.id)"
+                ng-class="{true:'active'}[items.id===type]"></button>
       </div>
     </div>
   </aside>

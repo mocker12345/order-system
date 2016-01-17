@@ -15,6 +15,7 @@ app.controller('menuController', ['$scope', '$rootScope','api', function ($scope
       $scope.data = res.data;
     });
   };
+  $scope.menuList();
   $rootScope.$watch('cid', function () {
     $scope.menuList();
   });
@@ -27,4 +28,5 @@ app.controller('menuController', ['$scope', '$rootScope','api', function ($scope
       }
     });
   }
+
 }]);

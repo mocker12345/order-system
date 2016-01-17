@@ -1,9 +1,9 @@
-app.controller('addController',['$scope','$rootScope','$location','api',function ($scope,$rootScope,$location,api) {
-  if ($rootScope.nowId){
+app.controller('addController', ['$scope', '$rootScope', '$location', 'api', function ($scope, $rootScope, $location, api) {
+  if ($rootScope.nowId) {
     $scope.parmas = {};
     var fileBtn = document.getElementById('file-btn');
     api.category.find.get().then(function (res) {
-      if(res.success){
+      if (res.success) {
         $scope.cate = res.data;
       }
       else {
@@ -12,11 +12,11 @@ app.controller('addController',['$scope','$rootScope','$location','api',function
     });
     fileBtn.addEventListener('change', function () {
       var file = fileBtn.files[0];
-      if (file && file.size<500*1024){
+      if (file && file.size < 500 * 1024) {
         var fd = new FormData();
-        fd.append('file',file);
+        fd.append('file', file);
         $scope.parmas.file = fd;
-      }else {
+      } else {
         alert('图片不应大于500k');
       }
 
@@ -24,15 +24,15 @@ app.controller('addController',['$scope','$rootScope','$location','api',function
 
     $scope.save = function () {
       api.product.add.post($scope.params).then(function (res) {
-        if (res.success){
+        if (res.success) {
           alert(res.data);
-        }else {
+        } else {
           alert(res.errorMsg);
         }
       });
     };
 
-  }else {
+  } else {
     alert('请先登陆');
     $location.path('/login');
   }

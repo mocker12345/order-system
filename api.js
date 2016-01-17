@@ -12,6 +12,7 @@ app.factory('api', ($q, $http) => new Apisdk([
   'GET /order/add',
   'GET /order/find',
   'GET /order/load/:id',
+  'POST /order/:id'
 ], {
   host: '/ordersystem',
   promise: $q,
@@ -33,7 +34,6 @@ app.factory('api', ($q, $http) => new Apisdk([
       }
       delete request.data;
     }
-    // Angular 默认给所有请求加上 application/json，对 FormData 单独处理
     if (request.data instanceof FormData) {
       request.headers = {
         'Content-Type': undefined

@@ -15,9 +15,9 @@ app.controller('infoController', ['$scope', '$rootScope', '$location', 'api', fu
       console.error(err);
     });
   } else {
-    //console.log($location);
+    alert('请先登陆');
     $location.path('/login');
-    console.log(123);
+    //console.log(123);
 
   }
   $scope.update = function () {
